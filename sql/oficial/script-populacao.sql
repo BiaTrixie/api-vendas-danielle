@@ -31,7 +31,7 @@ INSERT INTO enderecos("cep", "logradouro", "complemento", "bairro", "localidade"
 	-- 14
 	('38038064', 'Rua 2000', 'Nº 20', 'Setor Qualquer', 'Uberaba', 'MG' ),
 	-- 15
-	('38400266', 'Rua 3000', 'Nº 30', 'Setor Qualquer', 'Uberlândia', 'GO' ),
+	('38400266', 'Rua 3000', 'Nº 30', 'Setor Qualquer', 'Uberlândia', 'GO' );
 
 --
 -- POPULAR TABELA CLIENTES
@@ -71,9 +71,9 @@ INSERT INTO clientes ("cpf_cnpj", "nome_razaosocial", "telefone", "endereco", "t
 --
 -- POPULAR TABELA LOJISTAS
 --
-INSERT INTO lojistas ("cnpj", "razaosocial", "segmento", "telefone", "endereco", "ativo") VALUES 
+INSERT INTO lojistas ("cnpj", "razaoSocial", "segmento", "telefone", "endereco", "ativo") VALUES 
 	-- 01
-	('64003486000102','Zé modas','Moda Masculina', 6235353614, 11, true),
+	('23197506000138','Zé modas','Moda Masculina', 6235353614, 11, true),
 	-- 02
 	('70824477000541','De millus','Moda Íntima', 6235353620, 12, false),
 	-- 03
@@ -87,18 +87,26 @@ INSERT INTO lojistas ("cnpj", "razaosocial", "segmento", "telefone", "endereco",
 	-- 07
 	('56793038000113', 'Pérolas Make', 'Cosméticos', 6240028922, 11, true),
 	-- 08
-	('81106457000187', 'Star Chick', 'Calçados', 6436765734, 12, true),
+	('81106457000187', 'Toda Jeans', 'Moda Feminina', 6436765734, 12, true),
 	-- 09
-	('11910252000174', 'Menina Bonita', 'Acessórios', 6431939226, 11, true),
+	('11910252000174', 'Meu Estilo', 'Moda Feminina', 6431939226, 11, true),
 	-- 10
 	('93074376000121', 'Xerife', 'Calçados', 40028922, 12, false),
 	-- 11
-	('15032544000102', 'Shopping dos Cosméticos', 'Cosméticos', 40028922, 11, true);
+	('08072594000158', 'Shopping dos Cosméticos', 'Cosméticos', 40028922, 11, true),
+	-- 12
+	('42579343000100', 'Flávio''s', 'Calçados', 6240028922, 11, true),
+	-- 13
+	('25580903000110', 'Innovar', 'Cosméticos', 6436765734, 12, true),
+	-- 14
+	('13108047000115', 'Menina Bonita', 'Acessórios', 6431939226, 11, true),
+	-- 15
+	('20069955000102', '4 Men', 'Moda Masculina', 40028922, 12, false);
 
 --
 -- POPULAR TABELA FORNECEDORES
 --
-INSERT INTO fornecedores ("cnpj", "razaosocial", "telefone", "endereco", "ativo") VALUES
+INSERT INTO fornecedores ("cnpj", "razaoSocial", "telefone", "endereco", "ativo") VALUES
 	-- 01
 	('70056402145784', 'Minha Marca', 6258946164, 13, false),
 	-- 02
@@ -114,61 +122,61 @@ INSERT INTO fornecedores ("cnpj", "razaosocial", "telefone", "endereco", "ativo"
 	-- 07
 	('13152458000108', 'Pinscher-Bull', 62986185432, 15, true),
 	-- 08
-	('81558192000158', 'Gutti', 6209688352, 15, true),
+	('63399939000190', 'Gutti', 6209688352, 15, true),
 	-- 09
-	('36374445000189', 'Prado', 62987678763, 14, true),
+	('76550207000100', 'Prado', 62987678763, 14, true),
 	-- 10
-	('13152458000108', 'A Boticária', 62986185432, 15, true),
+	('09713961000118', 'A Boticária', 62986185432, 15, true),
 	-- 11
-	('13152458000108', 'Luís Vitão', 62986185432, 15, true),
+	('88211368000140', 'Luís Vitão', 62986185432, 15, true),
 	-- 12
-	('81558192000158', 'Zangão Rei', 6209688352, 15, true),
+	('21153776000111', 'Zangão Rei', 6209688352, 15, true),
 	-- 13
-	('36374445000189', 'Tomme', 62987678763, 14, true),
+	('57701772000178', 'Tomme', 62987678763, 14, true),
 	-- 14
-	('13152458000108', 'Lacrastes', 62986185432, 15, true),
+	('88027642000125', 'Lacrastes', 62986185432, 15, true),
 	-- 15
-	('13152458000108', 'Ralf e Lara', 62986185432, 15, true);
+	('97193964000135', 'Ralf e Lara', 62986185432, 15, true);
 
 --
 -- POPULAR TABELA AQUISIÇÕES
 --
-INSERT INTO aquisicoes("fornecedor", "lojista", "datahoraaquisicao", "formapagamento", "valorTotal", "ativo") VALUES
+INSERT INTO aquisicoes("fornecedor", "lojista", "dataHoraAquisicao", "formaPagamento", "valorTotal", "ativo") VALUES
 	-- 01
-	(1, 1, '2022-10-25 14:34:09', 'D', '23.50', 'true'),
+	(1, 1, '2022-10-25 14:34:09', 'PX', 23.50, 'true'),
 	-- 02
-	(2, 2, '2022-10-24 12:34:49', 'D', '23.50', 'true'),
+	(2, 2, '2022-10-24 12:34:49', 'PX', 23.50, 'true'),
 	-- 03
-	(3, 3, '2022-10-23 11:34:00', 'D', '23.50', 'true'),
+	(3, 3, '2022-10-23 11:34:00', 'PX', 23.50, 'true'),
 	-- 04
-	(4, 4, '2022-10-23 10:34:59', 'D', '23.50', 'true'),
+	(4, 4, '2022-10-23 10:34:59', 'PX', 23.50, 'true'),
 	-- 05
-	(5, 5, '2022-10-22 09:14:52', 'D', '23.50', 'true'),
+	(5, 5, '2022-10-22 09:14:52', 'PX', 23.50, 'true'),
 	-- 06
-	(6, 6, '2022-10-23 17:04:33', 'D', '23.50', 'true'),
+	(6, 6, '2022-10-23 17:04:33', 'D', 23.50, 'true'),
 	-- 07
-	(7, 7, '2022-10-19 08:23:01', 'D', '23.50', 'true'),
+	(7, 7, '2022-10-19 08:23:01', 'D', 23.50, 'true'),
 	-- 08
-	(8, 8, '2022-10-11 08:23:01', 'D', '23.50', 'true'),
+	(8, 8, '2022-10-11 08:23:01', 'D', 23.50, 'true'),
 	-- 09
-	(9, 9, '2022-11-11 08:23:01', 'D', '23.50', 'true'),
+	(9, 9, '2022-11-11 08:23:01', 'D', 23.50, 'true'),
 	-- 10
-	(10, 10, '2022-11-14 08:23:01', 'D', '23.50', 'true'),
+	(10, 10, '2022-11-14 08:23:01', 'D', 23.50, 'true'),
 	-- 11
-	(11, 11, '2022-11-18 08:23:01', 'D', '23.50', 'true'),
+	(11, 11, '2022-11-18 08:23:01', 'CC', 23.50, 'true'),
 	-- 12
-	(12, 12, '2021-11-17 08:23:01', 'D', '23.50', 'true'),
+	(12, 12, '2021-11-17 08:23:01', 'CC', 23.50, 'true'),
 	-- 13
-	(13, 13, '2022-12-19 08:23:01', 'D', '23.50', 'true'),
+	(13, 13, '2022-12-19 08:23:01', 'CC', 23.50, 'true'),
 	-- 14
-	(14, 14, '2022-12-15 08:23:01', 'D', '23.50', 'true'),
+	(14, 14, '2022-12-15 08:23:01', 'CC', 23.50, 'true'),
 	-- 15
-	(15, 15, '2022-12-28 08:23:01', 'D', '23.50', 'true');
+	(15, 15, '2022-12-28 08:23:01', 'CC', 23.50, 'true');
 
 --
 -- POPULAR TABELA VENDAS
 --
-INSERT INTO vendas ("cliente", "lojista", "datahoravenda", "formapagamento", "vendavarejo", "desconto", "valorFrete", "valorTotal") VALUES
+INSERT INTO vendas ("cliente", "lojista", "dataHoraVenda", "formaPagamento", "vendaVarejo", "desconto", "valorFrete", "valorTotal") VALUES
 	(1,		1,	'2022-08-18 01:37:03-03',	'cd',	true,	0.0,	20.00,		97.00),
 	(2,		1,	'2022-08-19 16:37:08-03',	'cc',	true,	0.0,	20.00,		97.00),
 	(3,		2,	'2022-08-20 17:37:10-03',	'cd',	true,	0.0,	20.00,		97.00),
